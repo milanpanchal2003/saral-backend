@@ -19,9 +19,8 @@ const PORT = 5000;
 
 
 app.use(cors({
-origin: isProduction
-    ? "https://iiitkota-auditorium-booking.vercel.app"
-    : "http://localhost:5173",
+origin: "https://iiitkota-auditorium-booking.vercel.app",
+credentials: true // Important if you're using cookies
 }));
 
 
