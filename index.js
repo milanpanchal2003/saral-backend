@@ -9,14 +9,7 @@ import session from "express-session";
 import passport from "passport";
 import "./config/googleAuth.js";
 
-
-
-
 const app = express();
-const PORT = 5000;
-
-
-
 
 app.use(cors({
 origin: "https://iiitkota-auditorium-booking.vercel.app",
@@ -54,7 +47,7 @@ mongoose
   })
   .then(() => {
     console.log("✅ MongoDB Connected");
-    app.listen(PORT, () => console.log(`🚀 Bun backend running on port ${PORT}`));
+    // app.listen(PORT, () => console.log(`🚀 Bun backend running on port `));
   })
   .catch((err) => console.error("❌ DB Error:", err));
 
