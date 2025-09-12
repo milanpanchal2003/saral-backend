@@ -41,10 +41,7 @@ app.use("/api/users", userRoutes);
 
 // ✅ MongoDB connect
 mongoose
-  .connect("mongodb+srv://IIITK:IIITKAB@cluster0.r1exb.mongodb.net/saral", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect("mongodb+srv://IIITK:IIITKAB@cluster0.r1exb.mongodb.net/saral")
   .then(() => {
     console.log("✅ MongoDB Connected");
     // app.listen(PORT, () => console.log(`🚀 Bun backend running on port `));
