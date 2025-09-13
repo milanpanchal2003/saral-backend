@@ -14,10 +14,18 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+import cors from "cors";
+
 app.use(cors({
-origin: "https://iiitkota-auditorium-booking.vercel.app",
-credentials: true // Important if you're using cookies
+  origin: [
+    "http://localhost:3000",          // React CRA local
+    "http://localhost:5173",          // Vite local
+    "https://saral-finance.vercel.app" // Live deployed frontend
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
+
 
 
 app.use(express.json());
